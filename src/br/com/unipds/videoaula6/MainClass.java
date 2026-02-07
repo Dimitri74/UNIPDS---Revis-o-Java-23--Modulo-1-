@@ -5,6 +5,6 @@ public class MainClass {
         ProdutoRepo repo = new ProdutoRepo();
 
         Produto p = repo.findById(10).orElseThrow(()-> new RuntimeException("Produto inexistente"));
-        System.out.println(p.getNome());
+        IO.println(p.getNome());
     }
 }

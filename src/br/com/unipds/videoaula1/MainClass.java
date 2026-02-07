@@ -15,7 +15,7 @@ public class MainClass {
         lista.add(new Produto(3,"Teclado",100.0));
         lista.add(new Produto(1,"Computador",1500.0));
         lista.add(new Produto(1,"Computador",1500.0));
-        System.out.println(lista);
+        IO.println(lista);
 
         Set<Produto> conjunto = new HashSet<>();
         conjunto.add(new Produto(1,"Computador",1500.0));
@@ -23,7 +23,7 @@ public class MainClass {
         conjunto.add(new Produto(1,"Computador",1500.0));
         conjunto.add(new Produto(1,"Computador",1500.0));
         conjunto.add(new Produto(1,"Computador",1500.0));
-        System.out.println(conjunto);
+        IO.println(conjunto);
 
         Map<Integer, Produto> mapa = new HashMap<>();
         mapa.put(1, new Produto(1,"Computador",1500));
@@ -31,7 +31,7 @@ public class MainClass {
         mapa.put(3, new Produto(3,"Teclado", 100.0));
         mapa.put(4, new Produto(1,"Computador",1500));
         mapa.put(1, new Produto(1,"Mesa",200.0));
-        System.out.println(mapa);
+        IO.println(mapa);
 
         //benchmarkList(100000);
         benchmarkMapa(100000);
@@ -56,7 +56,7 @@ public class MainClass {
         }
         fim = System.currentTimeMillis();
 
-        System.out.println("Demorou "+(fim-ini)+"ms para a busca");
+        IO.println("Demorou "+(fim-ini)+"ms para a busca");
     }
 
     public static void benchmarkMapa(int tamanho) {
@@ -75,7 +75,7 @@ public class MainClass {
             }
         }
         fim = System.currentTimeMillis();
-        System.out.println("Demorou "+(fim-ini)+"ms para a busca");
+        IO.println("Demorou "+(fim-ini)+"ms para a busca");
     }
 }
 

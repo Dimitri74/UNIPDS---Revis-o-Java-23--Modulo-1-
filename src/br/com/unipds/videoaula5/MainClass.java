@@ -13,19 +13,19 @@ public class MainClass {
         LocalTime horaAtual = LocalTime.now();
         LocalDateTime dataHoraAtual = LocalDateTime.now();
 
-        System.out.println(dataAtual);
-        System.out.println(horaAtual);
-        System.out.println(dataHoraAtual);
+        IO.println(dataAtual);
+        IO.println(horaAtual);
+        IO.println(dataHoraAtual);
 
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        System.out.println(dataAtual.format(format));
+        IO.println(dataAtual.format(format));
 
         String dataUsuario = "01/05/2025";
         LocalDate data = LocalDate.parse(dataUsuario, format);
 
-        System.out.println(data);
+        IO.println(data);
         DateTimeFormatter outroFormato = DateTimeFormatter.ofPattern("dd/MM/yy");
-        System.out.println(data.format(outroFormato));
+        IO.println(data.format(outroFormato));
 
     }
 }

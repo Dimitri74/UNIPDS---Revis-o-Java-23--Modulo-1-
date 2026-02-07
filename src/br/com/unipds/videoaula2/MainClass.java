@@ -9,17 +9,17 @@ import javax.crypto.SecretKey;
 public class MainClass {
     public static void main(String[] args) throws Exception{
         String texto = "Hello World!";
-        System.out.println("Criptografando...");
+        IO.println("Criptografando...");
         KeyGenerator keyGen = KeyGenerator.getInstance("AES");
         keyGen.init(128);
         SecretKey secretKey = keyGen.generateKey();
-        //System.out.println("Chave: "+secretKey);
+        //IO.println("Chave: "+secretKey);
 
         String textoCriptografado = criptografar(texto, secretKey);
-        System.out.println(textoCriptografado);
+        IO.println(textoCriptografado);
 
         String textoDecriptografado = decriptografar(textoCriptografado, secretKey);
-        System.out.println(textoDecriptografado);
+        IO.println(textoDecriptografado);
     }
 
     public static String criptografar(String textoOriginal, SecretKey chave) throws Exception{
